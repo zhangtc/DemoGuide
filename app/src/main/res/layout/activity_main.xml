@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="itemId"
+            type="Integer" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vp_guide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/v_tip0"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginBottom="20dp"
+        android:background="@{itemId == 0 ? @drawable/guide_tip_focus:@drawable/guide_tip_unfocus }"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/v_tip1"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/v_tip1"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:background="@{itemId == 1 ? @drawable/guide_tip_focus:@drawable/guide_tip_unfocus }"
+        app:layout_constraintBottom_toBottomOf="@id/v_tip0"
+        app:layout_constraintEnd_toStartOf="@+id/v_tip2"
+        app:layout_constraintStart_toEndOf="@+id/v_tip0" />
+
+    <View
+        android:id="@+id/v_tip2"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:background="@{itemId == 2 ? @drawable/guide_tip_focus:@drawable/guide_tip_unfocus }"
+        app:layout_constraintBottom_toBottomOf="@id/v_tip0"
+        app:layout_constraintEnd_toStartOf="@+id/v_tip3"
+        app:layout_constraintStart_toEndOf="@+id/v_tip1" />
+
+    <View
+        android:id="@+id/v_tip3"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_marginRight="150dp"
+        android:background="@{itemId == 3 ? @drawable/guide_tip_focus:@drawable/guide_tip_unfocus }"
+        app:layout_constraintBottom_toBottomOf="@id/v_tip0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/v_tip2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

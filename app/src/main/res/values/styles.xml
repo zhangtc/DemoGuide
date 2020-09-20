@@ -1,0 +1,30 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <string-array name="array_guide_title">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+    </string-array>
+    <string-array name="array_guide_sutitle">
+        <item>AAAAAAAAAAAAAAAA.</item>
+        <item>BBBBBBBBBBBBBBBB.</item>
+        <item>CCCCCCCCCCCCCCCC.</item>
+        <item>DDDDDDDDDDDDDDDD.</item>
+    </string-array>
+
+    <integer-array name="array_guide_src" >
+        <item>@mipmap/ic_launcher</item>
+        <item>@mipmap/ic_launcher</item>
+        <item>@mipmap/ic_launcher</item>
+        <item>@mipmap/ic_launcher</item>
+    </integer-array>
+
+</resources>
